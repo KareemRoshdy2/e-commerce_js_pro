@@ -1,0 +1,245 @@
+.profile-page {
+  padding: 0;
+  padding-top: 45px;
+}
+
+.profile-page .container {
+  min-height: calc(100vh + 165px);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-page section {
+  padding: 20px;
+  position: absolute;
+  transition: 0.2s;
+  width: 100%;
+  left: 100%;
+  background: var(--bg);
+}
+
+.profile-page section.show {
+  left: 0;
+  position: absolute;
+}
+
+.profile-page .sidebar {
+  min-height: calc(100vh + 165px);
+  width: 20%;
+  background: var(--white-color);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.sidebar-header {
+  text-align: center;
+  padding: 20px;
+  box-shadow: var(--inset-shadow2);
+  margin-bottom: 5px;
+}
+
+.sidebar-header .img {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.sidebar-header .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar-username {
+  color: var(--text-color);
+}
+
+.sidebar-links .link {
+  margin-bottom: 5px;
+  gap: 10px;
+  padding: 10px;
+  color: #4d4d4d;
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.sidebar-links .link > div {
+  gap: 15px;
+}
+
+.sidebar-links .link:hover {
+  color: var(--text-color);
+  background: #08d99421;
+}
+
+.section-heading {
+  width: max-content;
+  color: var(--text-color);
+  box-shadow: var(--inset-shadow2);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.total-price p {
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.price-number {
+  color: black;
+}
+
+.orders-table {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  overflow-x: scroll;
+  border-collapse: collapse;
+}
+
+.orders-table thead,
+.orders-table tbody tr {
+  font-size: 14px;
+}
+
+.orders-table tbody tr:hover {
+  background: #cccccc92;
+}
+
+.orders-table tbody td .img {
+  width: 40px;
+  height: 40px;
+  margin: auto;
+}
+
+.orders-table tbody td .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.orders-table tbody td.delete i {
+  color: red;
+  cursor: pointer;
+}
+
+.change-data {
+  color: var(--main-color);
+  border-bottom: 2px solid var(--gray-color);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.forms form {
+  width: 400px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.forms form label {
+  font-size: 14px;
+}
+
+.forms form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.forms form input:focus {
+  border-color: var(--text-color);
+}
+
+.forms .form-btn {
+  display: block;
+  background: var(--text-color);
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: var(--white-color);
+  cursor: pointer;
+  width: max-content;
+  margin-left: auto;
+}
+
+.deleteAccount {
+  color: red;
+  padding: 10px 20px;
+  border: 1px solid red;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.deleteAccount:hover {
+  background: red;
+  color: var(--white-color);
+}
+
+@media (max-width: 991px) {
+  .profile-page .sidebar {
+    width: 50px;
+  }
+
+  .sidebar-header {
+    padding: 10px 0;
+  }
+
+  .sidebar-header .img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .sidebar-username {
+    font-size: 9px;
+  }
+
+  .sidebar-links .link,
+  .sidebar-links .link > div {
+    gap: 25px;
+    padding-left: 13px;
+  }
+
+  .sidebar-links .link > div {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .profile-page {
+    padding-top: 90px;
+  }
+
+  .forms form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 350px) {
+  .profile-page section {
+    padding: 10px;
+  }
+
+  .orders-table thead,
+  .orders-table tbody tr {
+    font-size: 10px;
+  }
+
+  .orders-table tbody td .img {
+    width: 25px;
+    height: 25px;
+  }
+}

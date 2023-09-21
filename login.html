@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+
+    <link rel="stylesheet" href="style/all.min.css" />
+    <link rel="stylesheet" href="style/simple-line-icons.css" />
+    <link rel="stylesheet" href="style/global.css" />
+    <link rel="stylesheet" href="style/form.css" />
+
+    <title>Store | Login Page</title>
+  </head>
+  <body>
+    <div class="auth container flex align-center justify-center">
+      <div class="alert flex align-center justify-center">Message</div>
+
+      <form class="form" id="login">
+        <div class="form-header flex align-center space-between">
+          <p class="form-title">Login</p>
+          <p class="switch-link login">
+            Don't Have an account
+            <a class="link" href="signup.html">Join Now</a>
+          </p>
+        </div>
+
+        <div class="input-group flex">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+        </div>
+
+        <div class="input-group flex">
+          <label for="password">password</label>
+          <input type="password" name="password" id="password" />
+        </div>
+
+        <button class="btn" id="loginBtn">Login</button>
+      </form>
+    </div>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>

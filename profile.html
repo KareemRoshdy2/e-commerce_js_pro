@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+
+    <link rel="stylesheet" href="style/all.min.css" />
+    <link rel="stylesheet" href="style/simple-line-icons.css" />
+    <link rel="stylesheet" href="style/global.css" />
+    <link rel="stylesheet" href="style/profile.css" />
+
+    <title>Store | Profile Page</title>
+  </head>
+  <body>
+    <div class="loader flex align-center justify-center" id="loader">
+      <img src="images/loader/loader.gif" alt="loader" />
+    </div>
+
+    <header class="header flex align-center space-between">
+      <div class="alert flex align-center justify-center">message</div>
+
+      <a class="logo flex align-center">
+        <i class="fas fa-shopping-bag" id="logoIcon"></i>
+        <h3 id="logoText">Store</h3>
+      </a>
+
+      <nav class="navbar flex align-center space-between">
+        <ul class="flex align-center">
+          <li>
+            <a href="#" id="homeLink">
+              <i class="fas fa-home" id="homePage"></i>
+            </a>
+          </li>
+
+          <li class="shopping">
+            <a>
+              <i class="fas fa-shopping-bag" id="shoppingCart"></i>
+            </a>
+
+            <span
+              class="number flex align-center justify-center"
+              id="productsNumber"
+              >0</span
+            >
+          </li>
+        </ul>
+
+        <div class="user" id="user">
+          <p id="helloUser">Hi, <span id="username">Kareem</span></p>
+
+          <a href="login.html" class="btn" id="loginUser">Login</a>
+          <div class="user-list" id="userList">
+            <a
+              href="#"
+              class="profile flex align-center gap-10"
+              id="profilePage"
+            >
+              <i class="fas fa-user-circle"></i>
+              profile
+            </a>
+
+            <a href="#" id="logout" class="logout flex align-center gap-10">
+              <i class="icon-logout"></i>
+              logout
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="shopping-cart-list">
+        <div class="cart-header flex align-center space-between">
+          <h4>Your cart</h4>
+          <i class="icon-close" id="closeCart"></i>
+        </div>
+
+        <div class="cart-products-list" id="cartProductsList"></div>
+
+        <div class="cart-details">
+          <div class="total flex align-center space-between">
+            <p>total</p>
+            <p class="total-price" id="totalPriceNumber">$0</p>
+          </div>
+
+          <button class="btn">Checkout</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="profile-page flex">
+      <div class="sidebar">
+        <div class="sidebar-header">
+          <div class="img">
+            <img src="images/users/avataaars.svg" alt="userImg" />
+          </div>
+
+          <div class="sidebar-username">
+            <p class="user-name" id="username">Kareem Roshdy</p>
+          </div>
+        </div>
+
+        <div class="sidebar-links">
+          <ul>
+            <li class="link flex align-center space-between" id="myOrdersLink">
+              <div class="flex align-center" id="myOrderRow">
+                <i class="icon-handbag" id="myOrderIcon"></i>
+                <p id="myOrderText">my orders</p>
+              </div>
+            </li>
+
+            <li class="link flex align-center" id="settingsLink">
+              <i class="icon-settings" id="settingsIcon"></i>
+              <p id="settingsText">Settings</p>
+            </li>
+
+            <li class="link flex align-center" id="logoutLink">
+              <i class="icon-logout" id="logoutIcon"></i>
+              <p id="logoutText">logout</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container">
+        <section class="my-orders-section show" id="myOrdersSection">
+          <div class="section-heading flex align-center gap-10">
+            <i class="icon-handbag"></i>
+            <p>my orders</p>
+          </div>
+
+          <div class="total-price">
+            <p>
+              total price:
+              <span class="price-number" id="productsPriceNumber">$20</span>
+            </p>
+          </div>
+
+          <table class="orders-table" id="ordersTable"></table>
+        </section>
+
+        <section class="settings-section" id="settingsSection">
+          <div class="section-heading flex align-center gap-10">
+            <i class="icon-handbag"></i>
+            <p>settings</p>
+          </div>
+
+          <p class="change-data">Change your data</p>
+
+          <div class="forms">
+            <form id="changeEmail">
+              <label for="email">change your email</label>
+              <input type="email" name="email" id="email" />
+              <button class="form-btn">change</button>
+            </form>
+
+            <form id="changeUsername">
+              <label for="name">change your name</label>
+              <input type="text" name="name" id="name" />
+              <button class="form-btn">change</button>
+            </form>
+
+            <form id="changePassword">
+              <label for="password">change your password</label>
+              <input type="password" name="password" id="password" />
+              <button class="form-btn">change</button>
+            </form>
+
+            <div class="delete-account">
+              <button class="deleteAccount" id="deleteAccount">
+                <i class="icon-trash"></i>
+                delete account
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <footer>
+      <p class="copy-right">&copy; kareem roshdy</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/profile.js"></script>
+  </body>
+</html>
